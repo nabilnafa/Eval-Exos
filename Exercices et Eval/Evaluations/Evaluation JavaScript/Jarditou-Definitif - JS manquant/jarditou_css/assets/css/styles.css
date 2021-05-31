@@ -1,0 +1,133 @@
+/* Corps de page */
+
+
+
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Header - logo */
+.main_logo {
+  width: auto;
+  height: 50px;
+  margin: auto 0;
+
+}
+
+.slogan {
+  font-size: 20px;
+  font-weight: 300;
+  position: relative;
+  right: 300px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation */
+.navig {
+  background-color: black;
+}
+
+.navig ul {
+  display: flex;
+  padding: 20px 5px;
+  margin: 5px;
+}
+
+.navig ul li {
+  margin-right: 5px;
+  list-style: none;
+}
+
+.navig ul li a {
+  text-decoration: underline;
+  color: white;
+}
+
+.first_nav_item {
+  margin-left: 25px;
+}
+
+/* Promo */
+.promo {
+  box-sizing: content-box;
+  width: 100%;
+}
+
+/* Main section */
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.right_column {
+  background-color: rgb(211, 211, 211);
+  width: 29%;
+  height: auto;
+}
+
+.left_column {
+  width: 70%;
+}
+
+/* tableau */
+
+td {
+  width: 20%;
+  text-align: center;
+}
+
+.titres_tableau {
+  font-weight: bold;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  
+  .right_column {
+    display: none;
+  }   
+
+  .slogan{
+    font-size: 0.85rem;
+    right: 5px;
+  }
+
+ 
+  .first_nav_item {
+    margin-left: 0px;
+  }
+
+  .navig ul{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h1 {text-align: center;
+  }
+
+  .left_column {
+    margin: auto;
+    text-align: justify
+  }
+
+  .pic_tab {
+width: 100px;
+height: 100px;
+  }
+  
+  body
+  {font-size: 0.85rem;
+  }
+
+
+}
