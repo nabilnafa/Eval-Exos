@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -56,13 +56,14 @@
         <form id="contact_form" action="http://bienvu.net/script.php" onsubmit="return checkForm(this)">
 
             <fieldset><legend>Vos coordonnées</legend>
-                <label for="last_name">Votre nom* :</label>
-                <input class="form-control" type="text" placeholder="Veuillez saisir votre nom" name="user_last_name" id="last_name" required>
+
+                <label for="lastName">Votre nom* :</label>
+                <input class="form-control" type="text" placeholder="Veuillez saisir votre nom" name="lastName" id="lastName" >
                 <span id="1"></span>
                 <br>
 
-                <label for="name">Votre prénom* :</label>
-                <input class="form-control" type="text" placeholder="Veuillez saisir votre prénom" name="user_name" id="name" required>
+                <label for="firstName">Votre prénom* :</label>
+                <input class="form-control" type="text" placeholder="Veuillez saisir votre prénom" name="firstName" id="firstName" >
                 <span id="2"></span>
                 <br>
 
@@ -72,52 +73,56 @@
                     <label for="male">Féminin</label>
                     <input type="radio" id="female" name="user_gender" value="Masculin">
                     <label for="female">Masculin</label>
-                </div>
-                <span id="7"></span>
+                    <input type="radio" id="neutral" name="user_gender" value="Neutre">
+                    <label for="neutral">Neutre</label>                
+                    <span id="3"></span>
+              </div>
                 <br>
 
-                <label for="user_birth_date">Date de naissance* :</label>
-                <input class="form-control" type="date" placeholder="jj/mm/aaaa" name="birth_date" id="user_birth_date" required>
-                <br>
-
-                <label for="user_code_postal">Code postal* :</label>
-                <input class="form-control" type="number" name="code_postal" id="user_code_postal" required>
-                <span id="3"></span>
-                <br>
-
-                <label for="user_adress">Adresse :</label>
-                <input class="form-control" type="text" name="adress" id="user_adress">
+                <label for="birthDate">Date de naissance* :</label>
+                <input class="form-control" type="date" placeholder="jj/mm/aaaa" name="birthDate" id="birthDate" >
                 <span id="4"></span>
                 <br>
 
-                <label for="user_city">Ville :</label>
-                <input class="form-control" type="text" name="city" id="user_city">
+                <label for="cp">Code postal* :</label>
+                <input class="form-control" type="number" name="cp" id="cp">
                 <span id="5"></span>
                 <br>
 
-                <label for="user_email">Email* :</label>
-                <input class="form-control" type="email" name="email" id="user_email" placeholder="dave.loper@afpa.fr" required>
-            </fieldset>
+                <label for="userAddress">Adresse :</label>
+                <input class="form-control" type="text" name="userAddress" id="userAddress">
+                <br>
+
+                <label for="userCity">Ville :</label>
+                <input class="form-control" type="text" name="userCity" id="userCity">
+                <br>
+
+                <label for="userEmail">Email* :</label>
+                <input class="form-control" type="email" name="userEmail" id="userEmail" placeholder="dave.loper@afpa.fr" >
+                <span id="6"></span>
+              </fieldset>
             <br>
 
             <fieldset> <legend>Votre demande</legend>
-                <label for="subjects_select">Sujet* :</label>
-                <select class="form-control" name="subjects" id="subjects_select" required>
+                <label for="subjectSelect">Sujet* :</label>
+                <select class="form-control" name="subjectSelect" id="subjectSelect">
                     <option value="">Veuillez séléctionner un sujet</option>
                     <option value="réclamation">Réclamation</option>
                     <option value="retour remboursement">Retour ou remboursement</option>
                     <option value="aide produit">Assistance sur un produit</option>
-                </select>
+                    <span id="7"></span>
+                  </select>
                 <br>
-                <label for="user_question">Votre question* :</label>
-                <textarea class="form-control" name="question" id="user_question" cols="30" rows="2"></textarea>
+
+                <label for="userQuestion">Votre question* :</label>
+                <textarea class="form-control" name="userQuestion" id="userQuestion" cols="30" rows="2"></textarea>
             </fieldset>
-            <span id="6"></span>
+            <span id="8"></span>
             <br>
 
-            <input type="checkbox" name="agreement" id="user_agreement" required>
-            <label for="user_agreement">* J'accepte le traitement informatique de ce formulaire</label>
-            <span id="8"></span>
+            <input type="checkbox" name="userAgreement" id="userAgreement">
+            <label for="userAgreement">* J'accepte le traitement informatique de ce formulaire</label>
+            <span id="9"></span>
             <br>
             <br>
             
