@@ -39,7 +39,9 @@ GRANT SELECT ON gescom_afpa.customers TO 'gescom_afpa_marketing'@'localhost';
 
 
 
+                                --- *** ---
 
+                                
 -- Pour tester la création du rôle et des privilèges, on crée un utilisateur :
 
 CREATE USER 'roxanne'@'localhost' IDENTIFIED BY 'Police123*'
@@ -47,8 +49,11 @@ CREATE USER 'roxanne'@'localhost' IDENTIFIED BY 'Police123*'
 
 -- et on lui attribue le rôle créé plus haut: 
 
-GRANT 'gescom_afpa_marketing'@'localhost'
-TO 'roxanne'@'localhost'
+GRANT 'gescom_afpa_marketing'@'localhost' TO 'roxanne'@'localhost'
+
+-- et ensuite on "active" le rôle :
+
+SET DEFAULT ROLE 'gescom_afpa_marketing'@'localhost' TO roxanne@localhost
 
 -- pour visualiser les privilèges accordés sur l'utilisateur actuel :
 
@@ -57,3 +62,5 @@ SHOW GRANTS FOR CURRENT_USER
 -- ou même sur un rôle :
 
 SHOW GRANTS FOR `gescom_afpa_marketing`@`localhost`
+
+
