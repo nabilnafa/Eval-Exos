@@ -62,6 +62,9 @@ SELECT DISTINCT products.pro_id AS 'Code Produit', (orders_details.ode_quantity)
 FROM orders_details
 JOIN products ON products.pro_id = orders_details.ode_pro_id
 
+
+
+
 -- 02.      v_Ventes_Zoom correspondant à la requête : Afficher les ventes dont le code produit est ZOOM
 --          (affichage de toutes les colonnes de la table orders_details).
 
